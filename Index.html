@@ -76,7 +76,7 @@
         <div>
           <p>Edvertencias y alérgenos</p>
           <ol>
-            <li>La reserva se puede hacer con un día de antelación, si no es posible maximo 4-5 horas antes</li>
+            <li>La reserva se puede hacer con un día de antelación, si no es posible máximo 4-5 horas antes</li>
             <li>Tienes que seleccionar una fecha adecuada</li>
             <li>Espera nuestra confirmación</li>
           </ol>
@@ -112,6 +112,43 @@
           <dd>Abrimos los festivos pero de 12:00-18:00</dd>
         </dl>
     </aside>
+    </section>
+    <section>
+      <button id="abrir-reserva">Reservar mesa</button>
+      <dialog id="cuadro-reserva" aria-labelledby="res-titulo">
+        <h3 id="res-titulo">Solicitud de reserva</h3>
+        <ul>
+          <li>Máx. 6 personas por reserva.</li>
+          <li>15 minutos de cortesía; la mesa puede liberarse si se supera este tiempo.</li>
+          <li>Por favor, avisa con antelación si necesitas silla de bebé o accesibilidad especial.</li>
+          <li>Las reservas pueden requerir depósito en días festivos o eventos especiales.</li>
+          <li>Si llegas tarde más de 30 minutos, la reserva podría cancelarse.</li>
+        </ul>
+        <button id="cerrar-reserva">Cerrar</button>
+      </dialog>
+      <script>
+        (function () {
+    
+          const botonAbrir = document.getElementById('abrir-reserva');
+          const cuadroDialogo = document.getElementById('cuadro-reserva');
+          const botonCerrar = document.getElementById('cerrar-reserva');
+          botonAbrir.addEventListener('click', () => {
+            if (typeof cuadroDialogo.showModal === 'function') {
+            cuadroDialogo.showModal();
+            } else {
+            cuadroDialogo.setAttribute('open', '');
+            }     
+            cuadroDialogo.focus();
+        });
+        botonCerrar.addEventListener('click', () => {
+          cuadroDialogo.close();
+        });
+        cuadroDialogo.addEventListener('cancel', (evento) => {
+          evento.preventDefault();
+          cuadroDialogo.close();
+        });
+      })();
+      </script>
     </section>
   </main>
 </body>
