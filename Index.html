@@ -7,23 +7,23 @@
 </head>
 <body> 
   <header>
-    <figure>
+    <figure id=Inicio>
     <img src="https://blog-eeuu.com/wp-content/uploads/2018/08/breaking-bad-logo.jpeg" alt="imagen de pollos hermanos, logotipo de restaurante">
     <figcaption>Esta es la imagen respresentativa de pollos hermanos family.</figcaption>
   </figure>
   <h1>Sabores DAM</h1>
   <nav>
     <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Cartas</a></li>
-      <li><a href="#">Reservas</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="#Inicio">Inicio</a></li>
+      <li><a href="#Cartas">Cartas</a></li>
+      <li><a href="#Reservas">Reservas</a></li>
+      <li><a href="#Contacto">Contacto</a></li>
     </ul>
   </nav>
   </header>
   <main>
     <h2>Menú del día</h2>
-    <table>
+    <table id=Cartas>
       <caption>Pollos recien asados</caption>
       <thead>
         <tr>
@@ -113,7 +113,7 @@
         </dl>
     </aside>
     </section>
-    <section>
+    <section id=Reservas>
       <button id="abrir-reserva">Reservar mesa</button>
       <dialog id="cuadro-reserva" aria-labelledby="res-titulo">
         <h3 id="res-titulo">Solicitud de reserva</h3>
@@ -151,5 +151,20 @@
       </script>
     </section>
   </main>
+  <footer>
+    <address id=Contacto>
+      <p><strong><em>Restaurante Sabores DAM</em></strong></p>
+      <p>Calle Sabores, 42 – Oviedo</p>
+      <p>Tel: <a href="tel:985123456">985 123 456</a></p>
+      <p>Correo electrónico: 
+        <a href="mailto:info@saboresdam.es">info@saboresdam.es</a>
+      </p>
+      <p>Página web: 
+        <a href="file:///C:/Users/frang/Desktop/Trabajo%20restaurante%20Fran/Index.html" target="_blank">www.saboresdam.es</a>
+      </p>
+    </address>
+
+    <p>&copy; 2025 Restaurante Sabores DAM. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
